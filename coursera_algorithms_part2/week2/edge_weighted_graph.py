@@ -15,6 +15,9 @@ class Edge:
 
     def __gt__(self, edge):
         return self.wt > edge.wt
+    
+    def __hash__(self):
+        return id(self)
 
     def either(self):
         return self.v
